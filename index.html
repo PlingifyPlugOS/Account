@@ -7,50 +7,161 @@
     <title>Account</title>
 </head>
 <body>
-    <font style="color: black;">
-        <div class="text">
-    <h1>PlingifyPlugOS</h1>  <button onclick="window.location.href='https://plingifyplug.github.io/login-register/';" class="btn2">
-    <span class="btn-text-three"><div id = "digital-clock"> </div></p>
-
-
-    <button onclick="window.location.href='https://plingifyplug.github.io/login-register/';" class="btn">
-     
-  <span class="btn-text-one"> <div id = "digital-clock"></div></span>
-
-      <p></p><b id="battery-level"></b></p>
-      </span>
-    </button>
-      <font style="color: black;">
+    <div class="mainframe">
+    <div class="text">
+    <div class="topnav">
+    <h3>PlingifyPlugOS</h3>
+    <div class="buttonss">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+    <button  class="btn2">
+        <span class="btn-text-three"><div id = "digital-clock"> </div></p>
+        <button  class="btn">
+      <span class="btn-text-one"> </span>
+    
+          <p></p><b id="battery-level"></b></p>
+          </span>
+        </button></span>
+    </div>
+</div><font style="color: #000000;">
     <h1>‎</h1>
-    <h1>‎</h1>
 
-    <center><h1>Welcome To PlingifyPlugOS. To set your  account up enter your email and password below and click start! You may be required to enter a one time verification code.</h1></center>
-   <center>
-    <div class="form-container">
-        <input type="text" class="input" placeholder="User-Name">
-              <input type="email" class="input" placeholder="Email">
-              <input type="password" class="input" placeholder="Password">
-      <div class="button"
-      <button onclick="location.href = 'https://plingifyplug.github.io/Home/';" id="myButton" class="float-left submit-button" >Start</button>
-</div></center> </div>
+       
+    <h4>Welcome to PlingifyPlugOS Online. To get started please press start. Please note that no data is saved, you will not need to enter an email, phone number or password. This is simply just a Operating System. To cancel and head back to hub <a href="https://plingifyplug.github.io/Hub/"> Click Here </a> or to head to our main site <a href="https://plingifyplug.github.io/PlinifyPlug/"> Click Here</a> PlingifyPlugOS Needs a minimum of 4GB Ram, Intel Pentinum 1.1Ghz and a Strong Wifi Connection. Please dont abuse the Operating System as PLingifyPlug is a non-income company. PlingifyPlug OS an offical Operating system like Windows, Linux and Chrome OS will be released within the next 5 years.</h4>
+</font>
+<center>
+    <font style="color: #fff;">
+
+ <div class="shape1">
+
+ <a href="https://plingifyplugos.github.io/Home/"><h3> Start</h3></a>
+ </div></div>
+</center>
+
+<h1>‎</h1>
+<h1>‎</h1>
 <h1>‎</h1>
 
+    <button onclick="location.href = 'https://plingifyplug.github.io/Hub/';" class="btn2">
+        <span class="btn-text-three"> Turn-Off</span>
+        </button>
 
+        <button onclick="location.href = 'https://plingifyplugos.github.io/Boot/';" class="btn">
+      <span class="btn-text-one"> Restart</span>
+        </button></span>
 
-
-
-
-</font></font>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <center>
+        <div id = "digital-clock"></div> <div class="battery-info">
+        <p>
+            <b>The Battery Percentage is:</b>
+            <span id="battery-percentage">0</span>
+        </p>
+ 
+        <p>
+            <b>Is Battery Charging? :</b>
+            <span id="is-battery-charging">No</span>
+        </p>
+ 
+        <p>
+            <b>Battery Charging Time:</b>
+            <span id="chargingtime"></span>
+        </p>
+ 
+        <p>
+            <b>Battery discharging Time:</b>
+            <span id="dischargingtime"></span>
+        </p>
+   </center> </div>
+    </div>
+</div></font>
 </body>
 <style>
 
-.btn2{
-  
+.mainframe{ animation: fadeIn 5s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+a:link {
+  color: rgb(162, 163, 181);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(162, 163, 181);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(38, 0, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(162, 163, 181);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+ .shape1{
+    width: 100px;
+    height: 30px;
+    background-color: #2e2d2e;
+    border-radius: 20px;
+ }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.btn2 {
+    float: left;
   margin-right: 15px;
-float: left;
-  width: 100px;
+  width: 80px;
   height: 40px;
-  background-color: #6f6e70;
+  background-color: #2e2d2e;
   color: #fff;
   border-radius: 15px 0px 0px 15px;
   border: none;
@@ -61,12 +172,12 @@ float: left;
   overflow: hidden;
 }
 
+
 .btn {
   
-float: left;
-  width: 100px;
+  width: 80px;
   height: 40px;
-  background-color: #6f6e70;
+  background-color: #2e2d2e;
   color: #fff;
   border-radius: 0px 15px 15px 0px;
   border: none;
@@ -92,67 +203,6 @@ float: left;
   transform: translateY(-50%);
 }
 
-.form-box {
-  max-width: 300px;
-  background: #918f8f
-  overflow: hidden;
-  border-radius: 16px;
-  color: #010101;
-}
-
-.form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 32px 24px 24px;
-  gap: 16px;
-  text-align: center;
-}
-
-/*Form text*/
-.title {
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: #666;
-}
-
-/*Inputs box*/
-.form-container {
-  overflow: hidden;
-  border-radius: 8px;
-  background-color: #918f8f;
-  margin: 1rem 0 .5rem;
-  width: 100%;
-}
-
-.input {
-    margin-top: 100px;
-  background: none;
-  border: 0;
-  outline: 0;
-  height: 50px;
-  width: 20%;
-  border-bottom: 1px solid #000000;
-  font-size: .9rem;
-  padding: 8px 15px;
-}
-
-.form-section {
-  padding: 16px;
-  font-size: .85rem;
-  background-color: #665959;
-  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
-}
-
-.form-section a {
-  font-weight: bold;
-  color: #26282b;
-  transition: color .3s ease;
-}
 
 .button {
   background-color: #393c3f;
@@ -169,119 +219,191 @@ float: left;
 }
 
 .form button:hover {
-  background-color: #005ce6;
+  background-color: #e3e6eb;
 }
 
-    .text{
-        font-family: Arial;
-    }
+.text{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
     body{
-      background-color: #918f8f;
+        background-color: white;
     }
 </style>
 
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "www.yoursite.com";
+    };
+</script>
+
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
 <SCRIPT langauge="JavaScript">
 
-navigator.getBattery().then(function(battery) {
+    navigator.getBattery().then(function(battery) {
+    
+    var level = battery.level;
+    
+    console.log(level);
+    });
+    
+    let batterySupported = document.getElementById("battery-supported"),
+      batteryLevel = document.getElementById("battery-level"),
+      chargingStatus = document.getElementById("charging-status"),
+      batteryCharged = document.getElementById("battery-charged"),
+      batteryDischarged = document.getElementById("battery-discharged");
+    
+    let success = function(battery) {
+      if (battery) {
+        function setStatus() {
+          console.log("Set status");
+          batteryLevel.innerHTML = Math.round(battery.level * 100) + "%";
+          chargingStatus.innerHTML = (battery.charging) ? "" : "not ";
+          batteryCharged.innerHTML = (battery.chargingTime == "Infinity") ?
+            "Infinity" : parseInt(battery.chargingTime / 60, 10);
+          batteryDischarged.innerHTML = (battery.dischargingTime == "Infinity") ?
+            "Infinity" : parseInt(battery.dischargingTime / 60, 10);
+        }
+    
+        // Set initial status
+        setStatus();
+    
+        // Set events
+        battery.addEventListener("levelchange", setStatus, false);
+        battery.addEventListener("chargingchange", setStatus, false);
+        battery.addEventListener("chargingtimechange", setStatus, false);
+        battery.addEventListener("dischargingtimechange", setStatus, false);
+      } else {
+        throw new Error('Battery API not supported on your device/computer');
+      }
+    };
+    
+    let error = function(error) {
+      batterySupported.innerHTML = error.message;
+    };
+    
+    navigator.getBattery() //returns a promise
+      .then(success)
+      .catch(error);
+    </SCRIPT>
+    
+    <script>
+        navigator.getBattery().then(function (battery) {
+            function showAllBatteryInfo() {
+                editChargeInfo();
+                editLevelInfo();
+                editChargingInfo();
+                editDischargingInfo();
+            }
+            showAllBatteryInfo();
+ 
+            battery.addEventListener('chargingchange',
+                function () {
+                    editChargeInfo();
+                });
+            function editChargeInfo() {
+ 
+                /* Test with the charger and without
+                charger by unplugging*/
+                var isBatteryCharging = (battery.charging ? "Yes" : "No")
+                document.getElementById('is-battery-charging')
+                    .innerText = isBatteryCharging
+            }
+ 
+            battery.addEventListener('levelchange', function () {
+                editLevelInfo();
+            });
+            function editLevelInfo() {
+                /* Shows the battery level*/
+                var batteryLevel = battery.level * 100
+                document.getElementById('battery-percentage')
+                    .innerText = batteryLevel
+            }
+ 
+            battery.addEventListener('chargingtimechange', function () {
+                editChargingInfo();
+            });
+            function editChargingInfo() {
+ 
+                /* Test with the charger and without charger by unplugging*/
+                var charge = battery.chargingTime
+                document.getElementById('chargingtime').innerText = charge
+            }
+ 
+            battery.addEventListener('dischargingtimechange', function () {
+                editDischargingInfo();
+            });
+            function editDischargingInfo() {
+                var disCharge = battery.dischargingTime
+                document.getElementById('dischargingtime')
+                    .innerText = disCharge
+            }
+        });
+    </script>
 
-var level = battery.level;
-
-console.log(level);
-});
-
-let batterySupported = document.getElementById("battery-supported"),
-  batteryLevel = document.getElementById("battery-level"),
-  chargingStatus = document.getElementById("charging-status"),
-  batteryCharged = document.getElementById("battery-charged"),
-  batteryDischarged = document.getElementById("battery-discharged");
-
-let success = function(battery) {
-  if (battery) {
-    function setStatus() {
-      console.log("Set status");
-      batteryLevel.innerHTML = Math.round(battery.level * 100) + "%";
-      chargingStatus.innerHTML = (battery.charging) ? "" : "not ";
-      batteryCharged.innerHTML = (battery.chargingTime == "Infinity") ?
-        "Infinity" : parseInt(battery.chargingTime / 60, 10);
-      batteryDischarged.innerHTML = (battery.dischargingTime == "Infinity") ?
-        "Infinity" : parseInt(battery.dischargingTime / 60, 10);
-    }
-
-    // Set initial status
-    setStatus();
-
-    // Set events
-    battery.addEventListener("levelchange", setStatus, false);
-    battery.addEventListener("chargingchange", setStatus, false);
-    battery.addEventListener("chargingtimechange", setStatus, false);
-    battery.addEventListener("dischargingtimechange", setStatus, false);
-  } else {
-    throw new Error('Battery API not supported on your device/computer');
-  }
-};
-
-let error = function(error) {
-  batterySupported.innerHTML = error.message;
-};
-
-navigator.getBattery() //returns a promise
-  .then(success)
-  .catch(error);
-</SCRIPT>
-
-<SCRIPT language="JavaScript"> 
-
-  function Time() {
-  
-   // Creating object of the Date class
-   var date = new Date();
-  
-   // Get current hour
-   var hour = date.getHours();
-   // Get current minute
-   var minute = date.getMinutes();
-   // Get current second
-   var second = date.getSeconds();
-  
-   // Variable to store AM / PM
-   var period = "";
-  
-
-  
-   // Converting the hour in 12-hour format
-   if (hour == 0) {
-   hour = 12;
-   } else {
-   if (hour > 12) {
-   hour = hour - 12;
-   }
-   }
-  
-   // Updating hour, minute, and second
-   // if they are less than 10
-   hour = update(hour);
-   minute = update(minute);
-   second = update(second);
-  
-   // Adding time elements to the div
-   document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
-  
-   // Set Timer to 1 sec (1000 ms)
-   setTimeout(Time, 1000);
-  }
-  
-   // Function to update time elements if they are less than 10
-   // Append 0 before time elements if they are less than 10
-  function update(t) {
-   if (t < 10) {
-   return "0" + t;
-   }
-   else {
-   return t;
-   }
-  }
-  
-  Time();
-  </SCRIPT>
+    <SCRIPT language="JavaScript"> 
+    
+      function Time() {
+      
+       // Creating object of the Date class
+       var date = new Date();
+      
+       // Get current hour
+       var hour = date.getHours();
+       // Get current minute
+       var minute = date.getMinutes();
+       // Get current second
+       var second = date.getSeconds();
+      
+       // Variable to store AM / PM
+       var period = "";
+      
+    
+      
+       // Converting the hour in 12-hour format
+       if (hour == 0) {
+       hour = 12;
+       } else {
+       if (hour > 12) {
+       hour = hour - 12;
+       }
+       }
+      
+       // Updating hour, minute, and second
+       // if they are less than 10
+       hour = update(hour);
+       minute = update(minute);
+       second = update(second);
+      
+       // Adding time elements to the div
+       document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
+      
+       // Set Timer to 1 sec (1000 ms)
+       setTimeout(Time, 1000);
+      }
+      
+       // Function to update time elements if they are less than 10
+       // Append 0 before time elements if they are less than 10
+      function update(t) {
+       if (t < 10) {
+       return "0" + t;
+       }
+       else {
+       return t;
+       }
+      }
+      
+      Time();
+      </SCRIPT>
 </html>
