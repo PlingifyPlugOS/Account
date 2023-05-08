@@ -22,9 +22,69 @@
       <div class="button"
       <button onclick="location.href = 'https://plingifyplug.github.io/Home/';" id="myButton" class="float-left submit-button" >Start</button>
 </div></center> </div>
-</font>
+<h1>‎</h1>
+
+
+<button onclick="window.location.href='https://plingifyplug.github.io/login-register/';" class="btn">
+  <span class="btn-text-one"><div id = "digital-clock"> </div></span>
+ <font style="color: #fff;">
+  <button onclick="window.location.href='https://plingifyplug.github.io/login-register/';" class="btn2">
+    <span class="btn-text-three"><div id = "digital-clock"> </div></p>
+
+      <p></p><b id="battery-level"></b></p>
+      </span>
+
+
+
+</font></font>
 </body>
 <style>
+
+.btn2{
+  margin-right: 20px;
+  float: right;
+  width: 130px;
+  height: 50px;
+  background-color: #6f6e70;
+  color: #fff;
+  border-radius: 15px 0px 0px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.btn {
+  float: right;
+  width: 130px;
+  height: 50px;
+  background-color: #6f6e70;
+  color: #fff;
+  border-radius: 0px 15px 15px 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.btn span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
 
 .form-box {
   max-width: 300px;
@@ -110,4 +170,113 @@
         font-family: Arial;
     }
 </style>
+
+<SCRIPT langauge="JavaScript">
+
+navigator.getBattery().then(function(battery) {
+
+var level = battery.level;
+
+console.log(level);
+});
+
+let batterySupported = document.getElementById("battery-supported"),
+  batteryLevel = document.getElementById("battery-level"),
+  chargingStatus = document.getElementById("charging-status"),
+  batteryCharged = document.getElementById("battery-charged"),
+  batteryDischarged = document.getElementById("battery-discharged");
+
+let success = function(battery) {
+  if (battery) {
+    function setStatus() {
+      console.log("Set status");
+      batteryLevel.innerHTML = Math.round(battery.level * 100) + "%";
+      chargingStatus.innerHTML = (battery.charging) ? "" : "not ";
+      batteryCharged.innerHTML = (battery.chargingTime == "Infinity") ?
+        "Infinity" : parseInt(battery.chargingTime / 60, 10);
+      batteryDischarged.innerHTML = (battery.dischargingTime == "Infinity") ?
+        "Infinity" : parseInt(battery.dischargingTime / 60, 10);
+    }
+
+    // Set initial status
+    setStatus();
+
+    // Set events
+    battery.addEventListener("levelchange", setStatus, false);
+    battery.addEventListener("chargingchange", setStatus, false);
+    battery.addEventListener("chargingtimechange", setStatus, false);
+    battery.addEventListener("dischargingtimechange", setStatus, false);
+  } else {
+    throw new Error('Battery API not supported on your device/computer');
+  }
+};
+
+let error = function(error) {
+  batterySupported.innerHTML = error.message;
+};
+
+navigator.getBattery() //returns a promise
+  .then(success)
+  .catch(error);
+</SCRIPT>
+
+<SCRIPT language="JavaScript"> 
+
+  function Time() {
+  
+   // Creating object of the Date class
+   var date = new Date();
+  
+   // Get current hour
+   var hour = date.getHours();
+   // Get current minute
+   var minute = date.getMinutes();
+   // Get current second
+   var second = date.getSeconds();
+  
+   // Variable to store AM / PM
+   var period = "";
+  
+   // Assigning AM / PM according to the current hour
+   if (hour >= 12) {
+   period = "PM";
+   } else {
+   period = "AM";
+   }
+  
+   // Converting the hour in 12-hour format
+   if (hour == 0) {
+   hour = 12;
+   } else {
+   if (hour > 12) {
+   hour = hour - 12;
+   }
+   }
+  
+   // Updating hour, minute, and second
+   // if they are less than 10
+   hour = update(hour);
+   minute = update(minute);
+   second = update(second);
+  
+   // Adding time elements to the div
+   document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
+  
+   // Set Timer to 1 sec (1000 ms)
+   setTimeout(Time, 1000);
+  }
+  
+   // Function to update time elements if they are less than 10
+   // Append 0 before time elements if they are less than 10
+  function update(t) {
+   if (t < 10) {
+   return "0" + t;
+   }
+   else {
+   return t;
+   }
+  }
+  
+  Time();
+  </SCRIPT>
 </html>
