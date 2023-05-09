@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
 <body>
+  <div class="fade-in-text">
   <div class="text">
   <center><h2>PlingifyPlugOS Online</h2>
   <h4>Welcome to PlingifyPlugOS Online. This is a Online Browser to get started click the Start button below.</h4></center>
@@ -31,15 +32,15 @@
     <span class="btn-text-one"><div id = "digital-clock"> </div>Start</span>
   </button></center>
   <div class="btn-cont2">
-    <button onclick="window.location.href='https://plingifyplugos.github.io/Restarting/';" class="btn3"> 
+    <button onclick="window.location.href='https://plingifyplugos.github.io/ShuttingDown/';" class="btn3"> 
       <span class="btn-text-one"><div id = "digital-clock"> </div>Turn Off </span>
     </button>
 
-    <button onclick="window.location.href='https://plingifyplugos.github.io/ShuttingDown/';" class="btn3"> 
+    <button onclick="window.location.href='https://plingifyplugos.github.io/Restarting/';" class="btn3"> 
       <span class="btn-text-one"><div id = "digital-clock"> </div>Restart </span>
     </button>
 </div>
-  </div>
+  </div></div>
 </body>
 <style>
 .text{
@@ -144,6 +145,15 @@ float: right;
   100% {
     width: 16.25em;
   }
+}
+
+.fade-in-text {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 </style>
